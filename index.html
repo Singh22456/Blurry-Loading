@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blur Loading Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-sans text-black" style="background-color: #00215E;">
+    <!-- Responsive flex container with center alignment -->
+    <div class="flex flex-col items-center  min-h-screen">
+        <h1 class="text font-bold mt-8 mb-16 text-center" style="color:#FF6500">Blur Image Loading</h1>
+        
+        <!-- Responsive black div with flex properties -->
+        <div class="bg-black p-7 rounded-lg shadow-md relative w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl flex items-center justify-center overflow-hidden" style="height: 50vh;">
+            <!-- Image spans full width and is contained within black div -->
+            <img id="image" src="images/buildings-668616_1920.jpg" alt="Image" class="rounded-lg w-full h-full object-cover" style="filter: blur(30px);">
+            
+            <!-- Loading percentage placed to the right side of the image, centered vertically -->
+            <div id="loadPercentage" class="absolute top-1/2 transform -translate-y-1/2 font-bold" style="color: #FF6500;">
+                0%
+            </div>
+            
+        </div>
+        <!-- The container with full screen height and centered content -->
+<!-- Example with specific container having flex properties -->
+<div class="flex items-center mt-8 style="height: 50vh;">
+    <button id="blurButton" class="hover:bg-red-700 text-black font-bold py-2 px-4 rounded" style="background-color: #FF6500;">Click Me</button>
+  </div>
+  
+  
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
